@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../favicon.svg" type="image/x-icon">
+    <title>Document</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="menu__header">
+            <div class="menu__icon"></div>
+            <h3 class="menu__name">Имя</h3>
+            <button class="menu__notification">
+                <svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use href="sprite.svg#notification" x="0" y="0"></use>
+                </svg>
+                <p class="notification__notif">1</p>
+            </button>
+        </div>
+        <div class="menu__main">
+            <button class="main__btn">
+                <a class="btn__link" href="http://127.0.0.1:5500/profile%20page/index.html">Мой аккаунт</a>
+            </button>
+            <button class="main__btn">
+                <a class="btn__link" href="http://127.0.0.1:5500/vaolation%20page/index.html">Мои нарушения</a>
+            </button>
+            <button class="main__btn">
+                <a class="btn__link" href="http://127.0.0.1:5500/send%20paage/index.html">Отправить нарушение</a>
+            </button>
+        </div>
+        <div class="menu__footer">
+            <button class="menu__exit">Выйти</button>
+        </div>
+    </div>
+    <header class="header container">
+        <div class="header__logo">
+            <h2 class="logo__heading"><a href="http://127.0.0.1:5500/main%20page/index.html">БЕЗОПАСНЫЕ ДОРОГИ</a></h2>
+        </div>
+        <div class="header__buttons">
+            <svg class="buttons__search" viewBox="0 0 40 40">
+                <use href="sprite.svg#search" x="0" y="0"></use>
+            </svg>
+            <div class="buttons__profile">
+                <div class="profile__user">
+                    <svg viewBox="0 0 40 40">
+                        <use href="sprite.svg#user" x="0" y="0"></use>
+                    </svg>
+                    <p class="profile__notif">1</p>
+                </div>
+                <p class="profile__name">Имя Пользователя</p>
+            </div>
+        </div>
+    </header>
+   <main class="main container">
+       <div class="main__left">
+            <div class="left__top">
+                <div class="avatar">
+                    ФИ
+                </div>
+                <svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 26.5H2V22.5616C2 21.6438 2.63308 20.8589 3.47643 20.497C4.71042 19.9674 6 19.1127 6 18C6 16.4509 6 12.277 6 10.1979C6 10.0662 6.01251 9.93621 6.03886 9.80717C6.4229 7.92647 7.73078 2.49995 14 2.5C20.5 2.50005 21.5 7 21.5 10V17.1716C21.5 17.702 21.7076 18.2132 22.0991 18.5711C22.6896 19.1111 23.4478 19.7442 24.1804 20.2285C25.1017 20.8378 26 21.8954 26 23V26.5H18.5M10 26.5C10.1667 27.8334 11.1716 30.0001 14 30.0001C17 30.0001 18.1667 27.5 18.5 26.5M10 26.5H18.5" stroke="#1343EA" stroke-width="4"/>
+                </svg>
+            </div>
+            <h3 class="left__heading">Имя Фамилия</h3>
+            <button class="left__change">Изменить профиль</button>
+       </div>
+       <div class="main__center">
+            <h2 class="center__heading">Мои данные</h2>
+            <div class="center__fio">
+                <div class="avatar">
+                    ФИ
+                </div>
+                <h3 class="fio__text">Фамилия Имя Отчество</h3>
+            </div>
+            <div class="center__number">
+                <p class="number__number">+7 888 888-88-88</p>
+                <button class="center__btn">Изменить</button>
+            </div>
+            <div class="center__email">
+                <p class="email__email">Pochta@yandex.ru</p>
+                <button class="center__btn">Изменить</button>
+            </div>
+            <button class="center__change">Сменить пароль</button>
+       </div>
+       <div class="main__right">
+            <h2 class="right__heading">Уведомления</h2>
+            <div class="right__container" data-simplebar>
+                <!-- <div class="right__item">
+                    <svg class="item__icon" width="43" height="35" viewBox="0 0 43 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.95618 33V2M1.95618 33H40.746M1.95618 33L16.6169 17.1961M1.95618 2H40.746M1.95618 2L16.6169 17.1961M40.746 2V33M40.746 2L26.3907 17.1961M40.746 33L26.3907 17.1961M16.6169 17.1961L21.1984 22.0588L26.3907 17.1961" stroke="#1343EA" stroke-width="3"/>
+                    </svg>  
+                    <div class="right">
+                        <h3 class="item__heading">Заголовок</h3>
+                        <p class="item__text">Основной текст уведомления</p>
+                    </div>                      
+                </div>
+                <div class="right__item">
+                    <svg class="item__icon" width="43" height="35" viewBox="0 0 43 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.95618 33V2M1.95618 33H40.746M1.95618 33L16.6169 17.1961M1.95618 2H40.746M1.95618 2L16.6169 17.1961M40.746 2V33M40.746 2L26.3907 17.1961M40.746 33L26.3907 17.1961M16.6169 17.1961L21.1984 22.0588L26.3907 17.1961" stroke="#1343EA" stroke-width="3"/>
+                    </svg>  
+                    <div class="right">
+                        <h3 class="item__heading">Заголовок</h3>
+                        <p class="item__text">Основной текст уведомления</p>
+                    </div>                      
+                </div>
+                <div class="right__item">
+                    <svg class="item__icon" width="43" height="35" viewBox="0 0 43 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.95618 33V2M1.95618 33H40.746M1.95618 33L16.6169 17.1961M1.95618 2H40.746M1.95618 2L16.6169 17.1961M40.746 2V33M40.746 2L26.3907 17.1961M40.746 33L26.3907 17.1961M16.6169 17.1961L21.1984 22.0588L26.3907 17.1961" stroke="#1343EA" stroke-width="3"/>
+                    </svg>  
+                    <div class="right">
+                        <h3 class="item__heading">Заголовок</h3>
+                        <p class="item__text">Основной текст уведомления</p>
+                    </div>                      
+                </div>
+                <div class="right__item">
+                    <svg class="item__icon" width="43" height="35" viewBox="0 0 43 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.95618 33V2M1.95618 33H40.746M1.95618 33L16.6169 17.1961M1.95618 2H40.746M1.95618 2L16.6169 17.1961M40.746 2V33M40.746 2L26.3907 17.1961M40.746 33L26.3907 17.1961M16.6169 17.1961L21.1984 22.0588L26.3907 17.1961" stroke="#1343EA" stroke-width="3"/>
+                    </svg>  
+                    <div class="right">
+                        <h3 class="item__heading">Заголовок</h3>
+                        <p class="item__text">Основной текст уведомления</p>
+                    </div>                      
+                </div>
+                <div class="right__item">
+                    <svg class="item__icon" width="43" height="35" viewBox="0 0 43 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.95618 33V2M1.95618 33H40.746M1.95618 33L16.6169 17.1961M1.95618 2H40.746M1.95618 2L16.6169 17.1961M40.746 2V33M40.746 2L26.3907 17.1961M40.746 33L26.3907 17.1961M16.6169 17.1961L21.1984 22.0588L26.3907 17.1961" stroke="#1343EA" stroke-width="3"/>
+                    </svg>  
+                    <div class="right">
+                        <h3 class="item__heading">Заголовок</h3>
+                        <p class="item__text">Основной текст уведомления</p>
+                    </div>                      
+                </div>
+                <div class="right__item">
+                    <svg class="item__icon" width="43" height="35" viewBox="0 0 43 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.95618 33V2M1.95618 33H40.746M1.95618 33L16.6169 17.1961M1.95618 2H40.746M1.95618 2L16.6169 17.1961M40.746 2V33M40.746 2L26.3907 17.1961M40.746 33L26.3907 17.1961M16.6169 17.1961L21.1984 22.0588L26.3907 17.1961" stroke="#1343EA" stroke-width="3"/>
+                    </svg>  
+                    <div class="right">
+                        <h3 class="item__heading">Заголовок</h3>
+                        <p class="item__text">Основной текст уведомления</p>
+                    </div>                      
+                </div>                
+                <div class="right__item">
+                    <svg class="item__icon" width="43" height="35" viewBox="0 0 43 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.95618 33V2M1.95618 33H40.746M1.95618 33L16.6169 17.1961M1.95618 2H40.746M1.95618 2L16.6169 17.1961M40.746 2V33M40.746 2L26.3907 17.1961M40.746 33L26.3907 17.1961M16.6169 17.1961L21.1984 22.0588L26.3907 17.1961" stroke="#1343EA" stroke-width="3"/>
+                    </svg>  
+                    <div class="right">
+                        <h3 class="item__heading">Заголовок</h3>
+                        <p class="item__text">Основной текст уведомления</p>
+                    </div>                      
+                </div>
+                <div class="right__item">
+                    <svg class="item__icon" width="43" height="35" viewBox="0 0 43 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.95618 33V2M1.95618 33H40.746M1.95618 33L16.6169 17.1961M1.95618 2H40.746M1.95618 2L16.6169 17.1961M40.746 2V33M40.746 2L26.3907 17.1961M40.746 33L26.3907 17.1961M16.6169 17.1961L21.1984 22.0588L26.3907 17.1961" stroke="#1343EA" stroke-width="3"/>
+                    </svg>  
+                    <div class="right">
+                        <h3 class="item__heading">Заголовок</h3>
+                        <p class="item__text">Основной текст уведомления</p>
+                    </div>                      
+                </div>
+                <div class="right__item">
+                    <svg class="item__icon" width="43" height="35" viewBox="0 0 43 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.95618 33V2M1.95618 33H40.746M1.95618 33L16.6169 17.1961M1.95618 2H40.746M1.95618 2L16.6169 17.1961M40.746 2V33M40.746 2L26.3907 17.1961M40.746 33L26.3907 17.1961M16.6169 17.1961L21.1984 22.0588L26.3907 17.1961" stroke="#1343EA" stroke-width="3"/>
+                    </svg>  
+                    <div class="right">
+                        <h3 class="item__heading">Заголовок</h3>
+                        <p class="item__text">Основной текст уведомления</p>
+                    </div>                      
+                </div>
+                <div class="right__item">
+                    <svg class="item__icon" width="43" height="35" viewBox="0 0 43 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.95618 33V2M1.95618 33H40.746M1.95618 33L16.6169 17.1961M1.95618 2H40.746M1.95618 2L16.6169 17.1961M40.746 2V33M40.746 2L26.3907 17.1961M40.746 33L26.3907 17.1961M16.6169 17.1961L21.1984 22.0588L26.3907 17.1961" stroke="#1343EA" stroke-width="3"/>
+                    </svg>  
+                    <div class="right">
+                        <h3 class="item__heading">Заголовок</h3>
+                        <p class="item__text">Основной текст уведомления</p>
+                    </div>                      
+                </div>
+                <div class="right__item">
+                    <svg class="item__icon" width="43" height="35" viewBox="0 0 43 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.95618 33V2M1.95618 33H40.746M1.95618 33L16.6169 17.1961M1.95618 2H40.746M1.95618 2L16.6169 17.1961M40.746 2V33M40.746 2L26.3907 17.1961M40.746 33L26.3907 17.1961M16.6169 17.1961L21.1984 22.0588L26.3907 17.1961" stroke="#1343EA" stroke-width="3"/>
+                    </svg>  
+                    <div class="right">
+                        <h3 class="item__heading">Заголовок</h3>
+                        <p class="item__text">Основной текст уведомления</p>
+                    </div>                      
+                </div>
+                <div class="right__item">
+                    <svg class="item__icon" width="43" height="35" viewBox="0 0 43 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.95618 33V2M1.95618 33H40.746M1.95618 33L16.6169 17.1961M1.95618 2H40.746M1.95618 2L16.6169 17.1961M40.746 2V33M40.746 2L26.3907 17.1961M40.746 33L26.3907 17.1961M16.6169 17.1961L21.1984 22.0588L26.3907 17.1961" stroke="#1343EA" stroke-width="3"/>
+                    </svg>  
+                    <div class="right">
+                        <h3 class="item__heading">Заголовок</h3>
+                        <p class="item__text">Основной текст уведомления</p>
+                    </div>                      
+                </div> -->
+            </div>
+       </div>
+   </main>
+   <footer class="footer">
+
+   </footer>
+
+   <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+   <script src="script.js" defer></script>
+</body>
+</html>

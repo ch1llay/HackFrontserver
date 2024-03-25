@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../favicon.svg" type="image/x-icon">
+    <title>Document</title>
+</head>
+<body>
+    <div class="blackout none"></div>
+    <div class="modal none">
+        <svg class="modal__icon" xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110" fill="none">
+            <path d="M34.5 48.5L52.5 66.5L99 21" stroke="#1343EA" stroke-width="10" stroke-linecap="round"/>
+            <path d="M73.5 8.53407C67.7778 6.25383 61.5353 5 55 5C27.3858 5 5 27.3858 5 55C5 82.6142 27.3858 105 55 105C82.6142 105 105 82.6142 105 55C105 48.9943 103.941 43.236 102 37.9014" stroke="#1343EA" stroke-width="10"/>
+        </svg>
+        <h2 class="modal__heading">Нарушение отправлено</h2>
+        <button class="modal__button">Отправить еще нарушение</button>
+    </div>
+    <div class="menu">
+        <div class="menu__header">
+            <div class="menu__icon"></div>
+            <h3 class="menu__name">Имя</h3>
+            <button class="menu__notification">
+                <svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 26.5H2V22.5616C2 21.6438 2.63308 20.8589 3.47643 20.497C4.71042 19.9674 6 19.1127 6 18C6 16.4509 6 12.277 6 10.1979C6 10.0662 6.01251 9.93621 6.03886 9.80717C6.4229 7.92647 7.73078 2.49995 14 2.5C20.5 2.50005 21.5 7 21.5 10V17.1716C21.5 17.702 21.7076 18.2132 22.0991 18.5711C22.6896 19.1111 23.4478 19.7442 24.1804 20.2285C25.1017 20.8378 26 21.8954 26 23V26.5H18.5M10 26.5C10.1667 27.8334 11.1716 30.0001 14 30.0001C17 30.0001 18.1667 27.5 18.5 26.5M10 26.5H18.5" stroke="#1343EA" stroke-width="4"/>
+                </svg>
+                <p class="notification__notif">1</p>
+            </button>
+        </div>
+        <div class="menu__main">
+            <button class="main__btn">
+                <a class="btn__link" href="http://127.0.0.1:5500/profile%20page/index.html">Мой аккаунт</a>
+            </button>
+            <button class="main__btn">
+                <a class="btn__link" href="http://127.0.0.1:5500/vaolation%20page/index.html">Мои нарушения</a>
+            </button>
+            <button class="main__btn">
+                <a class="btn__link" href="http://127.0.0.1:5500/send%20paage/index.html">Отправить нарушение</a>
+            </button>
+        </div>
+        <div class="menu__footer">
+            <button class="menu__exit">Выйти</button>
+        </div>
+    </div>
+    <header class="header container">
+        <div class="header__logo">
+            <h2 class="logo__heading"><a href="http://127.0.0.1:5500/main%20page/index.html">БЕЗОПАСНЫЕ ДОРОГИ</a></h2>
+        </div>
+        <div class="header__buttons">
+            <svg class="buttons__search" class="" viewBox="0 0 40 40">
+                <use href="sprite.svg#search" x="0" y="0"></use>
+            </svg>
+            <div class="buttons__profile">
+                <div class="profile__user">
+                    <svg viewBox="0 0 40 40">
+                        <use href="sprite.svg#user" x="0" y="0"></use>
+                    </svg>
+                    <p class="profile__notif">1</p>
+                </div>
+                <p class="profile__name">Имя Пользователя</p>
+            </div>
+        </div>
+    </header>
+   <form class="main container">
+        <div class="main__left">
+            <h1 class="left__heading">Сообщить о нарушении</h1>
+            <div class="left__container">
+                <div class="container__item">
+                    <p class="item__hint">Введите адрес, где произошло нарушение</p>
+                    <input class="item__input " type="text">
+                </div>
+                <div class="container__item">
+                    <p class="item__hint">Выберите тип нарушения</p>
+                    <select class="item__select" name="" id="">
+                        <option value="" disabled></option>
+                        <option value="1">Проезд автомобиля на красный сигнал светофора</option>
+                        <option value="2">Переход пешеходом дороги на красный сигнал светофора</option>
+                        <option value="3">Водитель не пропустил пешехода</option>
+                        <option value="4">Выезд за стоп линию</option>
+                    </select>
+                </div>
+                <div class="container__item">
+                    <p class="item__hint">Комментарий</p>
+                    <textarea class="item__description"></textarea>
+
+                </div>
+            </div>
+        </div>
+        <div class="main__right">
+            <div class="right__container">
+                <div class="right__top">
+                    <input class="container__input" id="file" accept="image/png, image/gif, image/jpeg, video/mp4" type="file"/>
+                    <label id="dropContainer" class="container__label" for="file">Прикрепить фото</label>
+                    
+                </div>
+                <div class="right__bottom">
+                </div>
+            </div>
+            <button class="right__btn">Отправить</button>
+
+
+
+
+
+        </div>
+   </form>
+
+   <!-- <img id="test" src="http://92.53.97.223:8081/files/e9643851-bdc7-4674-9b99-ace743fb13ba" alt=""> -->
+
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+</body>
+</html>
